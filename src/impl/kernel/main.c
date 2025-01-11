@@ -18,6 +18,7 @@ void check_cmd(char* cmd) {
                   "# color-white #\n" \
                   "# clear       #\n" \
                   "# info        #\n" \
+                  "# githubrepo  #\n" \
                   "###############\n");
     } else if (compare_str(cmd, "reboot")) {
         reboot();
@@ -33,6 +34,8 @@ void check_cmd(char* cmd) {
         print_str("Info:\n" \
                   "OS: icaOS\n" \
                   "Version: 1.1\n");
+    } else if (compare_str(cmd, "githubrepo")) {
+        print_str("Github repo: https://github.com/Icarogamer2441/icaOS\n");
     } else {
         print_str("Unknown command: ");
         print_str(cmd);
