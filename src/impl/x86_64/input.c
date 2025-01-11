@@ -15,11 +15,10 @@ char* input() {
 
     while (1) {
         char scancode = read_scancode();
-        if (scancode & 0x80) {  // Ignora release key
+        if (scancode & 0x80) {
             continue;
         }
 
-        // Detecta backspace diretamente pelo scancode (0x0E)
         if (scancode == 0x0E) {
             if (index > 0) {
                 index--;
