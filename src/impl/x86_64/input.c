@@ -11,7 +11,6 @@ static char scancode_to_char(char scancode);
 char* input() {
     static char buffer[INPUT_BUFFER_SIZE];
     int index = 0;
-    print_set_color(PRINT_COLOR_GREEN, PRINT_COLOR_BLACK);
 
     while (1) {
         char scancode = read_scancode();

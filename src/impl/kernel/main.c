@@ -8,6 +8,11 @@ void check_cmd(char* cmd) {
         char* message = input();
         print_str(message);
         print_str("\n");
+    } else if (compare_str(cmd, "help")) {
+        print_str("############\n" \
+                  "#   help   #\n" \
+                  "#   print  #\n" \
+                  "############\n");
     } else {
         print_str("Unknown command\n");
     }
@@ -24,10 +29,12 @@ void terminal_loop() {
 void kernel_main() {
     print_clear();
     print_set_color(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
-    print_str("#####################\n");
-    print_str("# Welcome to IcaOS! #\n");
-    print_str("#####################\n");
-    print_str("#    Version 1.0    #\n");
-    print_str("#####################\n");
+    print_str("##################################\n");
+    print_str("#        Welcome to IcaOS!       #\n");
+    print_str("##################################\n");
+    print_str("#           Version 1.0          #\n");
+    print_str("##################################\n");
+    print_str("# use 'help' to see the commands #\n");
+    print_str("##################################\n");
     terminal_loop();
 }
